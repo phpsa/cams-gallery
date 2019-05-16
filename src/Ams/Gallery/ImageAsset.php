@@ -1,6 +1,9 @@
 <?php
 
 namespace Phpsa\CamsGallery\Ams\Gallery;
+
+use Phpsa\CamsGallery\Ams\CopyrightAsset;
+
 use Phpsa\Datastore\Asset;
 
 class ImageAsset extends Asset {
@@ -17,7 +20,11 @@ class ImageAsset extends Asset {
         'image' => array(
             'name' => 'Image',
             'type' => self::IMG
-        ),
+		),
+		'copyright' => [
+			'name' => 'Copyright',
+			'type' => CopyrightAsset::class
+		]
 
     );
 

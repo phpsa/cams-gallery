@@ -28,5 +28,11 @@ class PageAsset extends Asset {
     public static function about() {
         return 'This is a page to which Gallery Images are assigned.';
     }
-
+	/**
+	 * generate the route for this asset
+	 */
+	public static function route($record, $path = null){
+		$page = $record->page;
+		return route('frontend.ams.gallery.page', ['slug' => $page->slug, 'category' => $path ? $path : 'view']);
+	}
 }
