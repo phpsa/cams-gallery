@@ -16,7 +16,7 @@
 		<div class="card mb-4 shadow-sm">
 			<img class="bd-placeholder-img card-img-top img-thumbnail img-fluid" src="{{ $child->render('image') }}" />
 			<div class="card-body">
-			  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  <p class="card-text">{{ $child->prop('caption') }}</p>
 			  <footer class="blockquote-footer text-right">&copy; <cite title="Source Title">{{ $child->prop('copyright') }}</cite></footer>
 			</div>
 		  </div>
