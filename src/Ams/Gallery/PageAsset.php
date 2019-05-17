@@ -13,7 +13,10 @@ class PageAsset extends Asset {
     // public $accept_limit = "-1";
     public $children = "Phpsa\CamsGallery\Ams\Gallery\ImageAsset";
     // map our value as equal to whatever the title property is set on save.
-    public $value_equals = 'title';
+	public $value_equals = 'title';
+	public $status_equals = 'status';
+
+
     public $properties = array(
         'title' => array(
             'name' => 'Gallery Name',
@@ -22,7 +25,13 @@ class PageAsset extends Asset {
         'blurb' => array(
             'name' => 'Intro',
             'type' => self::STRING
-        )
+		),
+		'status' => [
+            'name' => 'Published',
+            'type' => self::DROPDOWN,
+			'options' => ['published' => 'Published', 'unpublished' => 'Unpublished'],
+			'published' => ['published']
+        ]
     );
 
     public static function about() {

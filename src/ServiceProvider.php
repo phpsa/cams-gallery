@@ -18,10 +18,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 			->group(__DIR__.'/routes.php');
 
 				//Translations
-		$this->loadTranslationsFrom(__DIR__.'/translations', 'phpsa-camsgallery');
+		$this->loadTranslationsFrom(__DIR__.'/translations', 'phpsa-cams-gallery');
 
 		$this->publishes([
-			__DIR__.'/translations' => resource_path('lang/vendor/phpsa-camsgallery'),
+			__DIR__.'/translations' => resource_path('lang/vendor/phpsa-cams-gallery'),
 		]);
     }
 
@@ -36,6 +36,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             return new CamsGallery();
 		});
 
-		$this->loadViewsFrom(__DIR__.'/views', 'phpsa-camsgallery');
+		$this->loadViewsFrom(__DIR__.'/views', 'phpsa-cams-gallery');
     }
 }
