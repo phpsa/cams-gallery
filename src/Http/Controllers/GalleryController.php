@@ -3,15 +3,7 @@
 namespace Phpsa\CamsGallery\Http\Controllers;
 
 use Phpsa\Datastore\Http\Controllers\DatastoreController;
-use Phpsa\Datastore\Datastore;
-use Phpsa\Datastore\Asset;
-use Phpsa\Datastore\Helpers;
-use Phpsa\Datastore\DatastoreException;
-use Phpsa\Datastore\Repositories\DatastoreRepository;
 
-use Phpsa\Datastore\Models\Datastore as DatastoreModel;
-use Phpsa\Datastore\Models\DatastorePages;
-use Phpsa\Datastore\Models\DatastoreDatastore;
 
 Class GalleryController extends DatastoreController {
 
